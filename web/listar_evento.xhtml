@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Listar Eventos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <b:container fluid="true">
+            <b:jumbotron transient="Event App">
+                <h:form id="form_panel">
+                    <b:navBar brand-href="#" brand="Painel" inverse="true" brandStyle="inline" fluid="fluid">
+                        <b:navbarLinks transient="Painel">
+                            <b:navLink value="Cadastrar Evento" icon-awesome="home" href="evento.xhtml" />
+                            <b:navLink value="Cadastrar Palestrante"  href="palestrante.xhtml"/>
+                            <b:navLink value="Listar Palestrantes"  href="listar_palestrante.xhtml"/>
+                            <b:navLink value="Listar Eventos"  href="#"/>
+                            <b:navLink value="Listar Parceiros"  href="#"/>
+                        </b:navbarLinks>
+                    </b:navBar>
+                </h:form>    
+            </b:jumbotron>
+
+        </b:container>
+
+        <br/>
+        <b:panel icon-flip="h" collapsible="true" title="Lista de Eventos">
+            <p:dataTable var="evento" value="#{EventoMB.listar()}" paginator="true" sortBy="#{evento.id}" style="width: 50%; height: 50%">
+                <p:column headerText="Id:">
+                    <p:outputLabel value="#{evento.id}"/>
+                </p:column>
+                <br/>
+                <p:column headerText="Local:">
+                    <p:outputLabel value="#{evento.local}"/>
+                </p:column>
+                <br/>
+                <p:column headerText="Data:">
+                    <p:outputLabel value="#{evento.data}"/>
+                </p:column>
+
+
+            </p:dataTable>
+        </b:panel>
+
+    </h:body>
+</html>

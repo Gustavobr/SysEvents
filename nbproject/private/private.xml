@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/gustavoscipiao/NetBeansProjects/EventApp/src/java/br/com/Controller/Controller.java</file>
+            <file>file:/Users/gustavoscipiao/NetBeansProjects/EventApp/web/palestrante.xhtml</file>
+            <file>file:/Users/gustavoscipiao/NetBeansProjects/EventApp/web/META-INF/context.xml</file>
+            <file>file:/Users/gustavoscipiao/NetBeansProjects/EventApp/src/conf/persistence.xml</file>
+            <file>file:/Users/gustavoscipiao/NetBeansProjects/EventApp/src/java/br/com/Model/Evento.java</file>
+            <file>file:/Users/gustavoscipiao/NetBeansProjects/EventApp/src/java/br/com/Model/Palestrante.java</file>
+            <file>file:/Users/gustavoscipiao/NetBeansProjects/EventApp/web/WEB-INF/web.xml</file>
+            <file>file:/Users/gustavoscipiao/NetBeansProjects/EventApp/web/listar_palestrante.xhtml</file>
+            <file>file:/Users/gustavoscipiao/NetBeansProjects/EventApp/web/index.xhtml</file>
+            <file>file:/Users/gustavoscipiao/NetBeansProjects/EventApp/src/java/br/com/Controller/EventoMB.java</file>
+            <file>file:/Users/gustavoscipiao/NetBeansProjects/EventApp/web/listar_evento.xhtml</file>
+            <file>file:/Users/gustavoscipiao/NetBeansProjects/EventApp/src/java/br/com/Controller/Teste.java</file>
+            <file>file:/Users/gustavoscipiao/NetBeansProjects/EventApp/web/evento.xhtml</file>
+        </group>
+    </open-files>
+</project-private>

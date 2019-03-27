@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Listar Palestrante</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <b:container fluid="true">
+            <b:jumbotron transient="Event App">
+                <h:form id="form_panel">
+                    <b:navBar brand-href="#" brand="Painel" inverse="true" brandStyle="inline" fluid="fluid">
+                        <b:navbarLinks transient="Painel">
+                            <b:navLink value="Cadastrar Evento" icon-awesome="home" href="evento.xhtml" />
+                            <b:navLink value="Cadastrar Palestrante"  href="palestrante.xhtml"/>
+                            <b:navLink value="Listar Palestrantes"  href="listar_palestrante.xhtml"/>
+                            <b:navLink value="Listar Eventos"  href="#"/>
+                            <b:navLink value="Listar Parceiros"  href="#"/>
+                        </b:navbarLinks>
+                    </b:navBar>
+                </h:form>    
+            </b:jumbotron>
+
+        </b:container>
+
+        <br/>
+        <div id="Painel" align="center">
+            <p:panel menuTitle="Lista de Palestrantes">
+                <b:panel title="Lista de Palestrantes" collapsible="true">
+
+
+                    <p:dataTable var="p" value="#{mvc.listar_palestrante()}" style="width: 50%; height: 50%" paginator="true" pageLinks="5">
+                        <p:column headerText="ID">
+                            <p:outputLabel value="#{p.id}"/>
+                        </p:column>
+                        <p:column headerText="Nome">
+                            <p:outputLabel value="#{p.nome}"/>
+                        </p:column>
+                        <p:column headerText="Tema">
+                            <p:outputLabel value="#{p.tema}"/>
+                        </p:column>
+                    </p:dataTable>
+                </b:panel>
+            </p:panel>
+        </div>
+    </h:body>
+</html>

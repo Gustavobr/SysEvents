@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:head>
+        <title>Event App</title>
+    </h:head>
+    <h:body>
+        <b:container fluid="true">
+            <b:jumbotron transient="Event App">
+                <h:form id="form_panel">
+                    <b:navBar brand-href="#" brand="Painel" inverse="true" brandStyle="inline" fluid="fluid">
+                        <b:navbarLinks transient="Painel">
+                            <b:navLink value="Cadastrar Evento" icon-awesome="home" href="evento.xhtml" />
+                            <b:navLink value="Cadastrar Palestrante"  href="palestrante.xhtml"/>
+                            <b:navLink value="Listar Palestrantes"  href="listar_palestrante.xhtml"/>
+                            <b:navLink value="Listar Eventos"  href="listar_evento.xhtml"/>
+                            <b:navLink value="Listar Parceiros"  href="#"/>
+                            <b:navLink value="Fale Conosco" onclick="javascript: window.location.href='mailto:gustavoScipiao@gmail.com';"/>
+                        </b:navbarLinks>
+                    </b:navBar>
+                </h:form>    
+            </b:jumbotron>
+
+        </b:container>
+        <br/>
+        <br/>
+        <b:container fluid="fluid">
+            <div id="logo" align="center">
+                <h:form id="logomarca">
+                    <h:graphicImage value="resources/img/logo-eventos.png" width="40%" height="40%" />
+                </h:form>
+            </div>
+        </b:container>
+
+        
+        <footer>
+            <b:container fluid="true">
+                <fieldset>
+                    <legend> Todos Direitos Reservados </legend>
+                </fieldset>
+            </b:container>
+        </footer>
+
+    </h:body>
+</html>
+

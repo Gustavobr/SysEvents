@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Cadastrar Evento</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <b:container fluid="true">
+            <b:jumbotron transient="Event App">
+                <h:form id="form_panel">
+                    <b:navBar brand-href="#" brand="Painel" inverse="true" brandStyle="inline" fluid="fluid">
+                        <b:navbarLinks transient="Painel">
+                            <b:navLink value="Cadastrar Evento" icon-awesome="home" href="evento.xhtml" />
+                            <b:navLink value="Cadastrar Palestrante"  href="palestrante.xhtml"/>
+                            <b:navLink value="Listar Palestrantes"  href="listar_palestrante.xhtml"/>
+                            <b:navLink value="Listar Eventos"  href="#"/>
+                            <b:navLink value="Listar Parceiros"  href="#"/>
+                        </b:navbarLinks>
+                    </b:navBar>
+                </h:form>    
+            </b:jumbotron>
+        </b:container>
+        <br/>
+        <b:container fluid="true">
+            <b:jumbotron>
+                <b:panel icon-flip="h" collapsible="true" title="Cadastrar Evento">
+                    <b:panelGrid columns="3">
+                        <b:form id="form_evento" title="Novo Evento">
+                            <p:messages>
+                                <b:label text="LOCAL"/><b:inputText id="txt_local" required="true" requiredMessage="Favor inserir local"
+                                                                    fieldSize="medium" value="#{EventoMB.evento.local}"/>
+                                <br/>
+                                <b:label text="Data"/><p:calendar mode="inline" mask="true" pattern="dd/mm/yyyy" required="true"
+                                                                  requiredMessage="Favor inserir Data do evento." value="#{EventoMB.evento.data}"/>
+                                <br/>
+                                <b:commandButton value="Gravar" action="#{EventoMB.addEvento()}"/>
+                                <br/>
+                                <br/>
+                                <b:link href="index.xhtml" value="Início" style="text-decoration: underline; font-size: 14px;"/>
+                            </p:messages>
+                        </b:form>
+                        <br/>
+                        <b:container fluid="true">
+                          
+                        </b:container>
+                    </b:panelGrid>
+                </b:panel>
+            </b:jumbotron>
+        </b:container>
+    </h:body>
+</html>

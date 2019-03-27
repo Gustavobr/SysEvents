@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:b="http://bootsfaces.net/ui">
+    <h:head>
+        <title>Cad Palestrante</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <b:container fluid="true">
+            <b:jumbotron transient="Event App">
+                <h:form id="form_panel">
+                    <b:navBar brand-href="#" brand="Painel" inverse="true" brandStyle="inline" fluid="fluid">
+                        <b:navbarLinks transient="Painel">
+                            <b:navLink value="Cadastrar Evento" icon-awesome="home" href="evento.xhtml" />
+                            <b:navLink value="Cadastrar Palestrante"
+                                       href="palestrante.xhtml"/>
+                            <b:navLink value="Listar Palestrantes"  href="#"/>
+                            <b:navLink value="Listar Eventos"  href="#"/>
+                            <b:navLink value="Listar Parceiros"  href="#"/>
+                        </b:navbarLinks>
+                    </b:navBar>
+                </h:form>    
+            </b:jumbotron>
+
+        </b:container>
+        <br/>
+        <br/>
+        <b:panel title="Novo Palestrante">
+            <br/>
+            <center>
+                <div id ="form_palestrante">
+                    <h:form style="align-content: center;">
+                        <b:panelGrid columns="3" style="position: relative; align-content: center;">
+                            <p:messages style="color: blue; text-decoration: underline;">
+                                <b:column>
+                                    <b:label text="Nome:"/> <b:inputText value="#{mvc.palestrante.nome}" required="true"
+                                                                         requiredMessage="Favor inserir nome"/>
+                                </b:column>
+                                <b:column>
+                                    <b:label text="Tema:"/> <b:inputText value="#{mvc.palestrante.tema}" required="true"
+                                                                         requiredMessage="Favor inserir tema"/>
+
+                                </b:column>
+                                <b:column>
+                                    <b:commandButton value="Gravar" action="#{mvc.savePalestrante()}"/><span><input type="reset"/></span>
+                                </b:column>
+
+                            </p:messages>
+                        </b:panelGrid>
+                    </h:form>
+                </div>
+            </center>
+        </b:panel>
+    </h:body>
+</html>
